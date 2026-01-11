@@ -10,7 +10,7 @@ const navigation = [{ name: "<" }, { name: ">" }];
 
 const NavBar = () => {
   return (
-    <div className="bg-green-500 flex w-full justify-between">
+    <div className="bg-gray-700 flex w-full justify-between">
       <div className="flex flex-row">
         {navigation.map((nav) => (
           <NavBarItem isIcon key={nav.name}>
@@ -34,4 +34,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-

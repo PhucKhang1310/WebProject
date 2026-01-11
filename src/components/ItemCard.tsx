@@ -1,20 +1,19 @@
-const ItemCard = () => {
+interface ItemCardProps {
+  item: { src: string; name: string; price: number; originalPrice: number };
+}
+
+const ItemCard = ({ item }: ItemCardProps) => {
   return (
-    <div>
-      <div className="aspect-square h-65 bg-black text-white rounded-3xl">
-        <div className="ml-5">
-          <p className="font-semibold text-2xl pt-5">Today's Deals</p>
-          <p className="font-normal text-md pt-2">All With Free Shipping</p>
-        </div>
+    <div className="flex flex-col w-1/5">
+      <div className="aspect-square rounded-3xl ">
+        <img src={item.src} className="object-cover" />
       </div>
       <div>
-        <p className="font-normal text-md w-3/4">
-          Cool Ass Random Device Name For Reference
-        </p>
-        <div className="flex items-end">
-          <p className="font-semibold text-xl flex-1">8.120.000.000đ</p>
+        <p className="font-normal text-md w-3/4">{item.name}</p>
+        <div className="flex items-end gap-1">
+          <p className="font-semibold text-xl flex-1">{item.price}</p>
           <p className="font-thin text-sm flex-1 line-through text-gray-400 ">
-            9.000.000.00đ
+            {item.originalPrice}
           </p>
         </div>
       </div>

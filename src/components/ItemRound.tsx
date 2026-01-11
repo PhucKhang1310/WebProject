@@ -1,13 +1,13 @@
-import laptop from "../assets/laptop.jpg";
+interface ItemRoundProps {
+  src: string;
+  title: string;
+}
 
-const ItemRound = () => {
+const ItemRound = ({ src, title }: ItemRoundProps) => {
   return (
-    <div className="flex flex-col items-center text-center w-max hover:cursor-pointer ">
-      <img
-        src={laptop}
-        className="object-cover rounded-full w-45 aspect-square"
-      />
-      <p className="mt-3 font-semibold text-md">Laptops</p>
+    <div className="flex flex-col items-center text-center hover:cursor-pointer ">
+      <img src={src} className="object-cover rounded-full aspect-square" />
+      <p className="mt-3 font-semibold text-md">{title}</p>
     </div>
   );
 };

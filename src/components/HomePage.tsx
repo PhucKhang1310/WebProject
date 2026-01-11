@@ -11,7 +11,6 @@ const HomePage = () => {
       <PopularItems />
       <CurrentOffers />
       <BigBanner />
-      <BigBanner />
       <Footer />
     </div>
   );
